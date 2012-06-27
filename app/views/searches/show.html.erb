@@ -1,0 +1,10 @@
+<h1>You searched for <%= params[:q] %>, cheezburger</h>
+
+<pre>
+<%= @results.inspect %>
+<pre>
+<ul>
+ <% @results['results'].each do |r| %>
+  <li><%=r['text']%></li>
+<%end%>
+</ul>
