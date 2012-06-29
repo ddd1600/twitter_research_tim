@@ -1,10 +1,14 @@
-<h1>You searched for <%= params[:q] %>, cheezburger</h>
+<h1>You searched for <%= params[:q] %></h1>
 
 <pre>
-<%= @results.inspect %>
-<pre>
+<% @results.inspect %>
+</pre>
 <ul>
  <% @results['results'].each do |r| %>
-  <li><%=r['text']%></li>
+   <li>
+     <img src="<%=r['profile_image_url']%>"/>
+     <FONT COLOR="#008B8B">User:</FONT><%=r['from_user']%>
+     <FONT COLOR="#008B8B">Tweeted:</FONT><%=r['text']%>
+   </li>
 <%end%>
 </ul>
