@@ -1,14 +1,14 @@
 <h1>You searched for <FONT COLOR="#008B8B"><%= params[:q] %></FONT></h1>
 
 <pre>
-  <% @results.inspect %>
+  <% @results.inspect%>
 </pre>
 <ul>
-  <% @results['results'].each do |r| %>
+  <% @results.each do |r| %>
     <li>
-      <img src="<%=r['profile_image_url']%>"/>
-      <FONT COLOR="#008B8B">User:</FONT><%=r['from_user']%>
-      <FONT COLOR="#008B8B">Tweeted:</FONT><%=r['text']%>
+      <img src="<%=r.avatar%>"/>
+      <FONT COLOR="#008B8B">User:</FONT><%=r.user%>
+      <FONT COLOR="#008B8B">Tweeted:</FONT><%=r.text%>
     </li>
     <%end%>
 </ul>
