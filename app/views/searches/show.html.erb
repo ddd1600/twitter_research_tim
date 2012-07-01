@@ -1,4 +1,4 @@
-<h1>You searched for <FONT COLOR="#008B8B"><%= params[:q] %></FONT></h1>
+<h1>You searched for <p class="first"><%= params[:q] %></p></h1>
 
 <pre>
   <% @results.inspect%>
@@ -9,6 +9,7 @@
       <img src="<%=r.avatar%>"/>
       <FONT COLOR="#008B8B">User:</FONT><%=r.user%>
       <FONT COLOR="#008B8B">Tweeted:</FONT><%=r.text%>
+      <FONT COLOR="#008B8B">On:</FONT><%=r.time%>
     </li>
     <%end%>
 </ul>
