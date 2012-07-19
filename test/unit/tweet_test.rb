@@ -10,8 +10,8 @@ class TweetTest < ActiveSupport::TestCase
 
   test("suggested categories works correctly") do
     tweet = Tweet.new do |t|
-      t.tweeted_text = "Politics and Business are instances of the
-      class religion #politics #religion #business? .  !%&"
+      t.tweeted_text = "Politics and 2012Business are instances of the
+      class religion #politics #religion 2#business? .  !%&"
     end
     assert_equal("Business, Politics, Religion", tweet.suggested_categories)
   end

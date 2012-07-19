@@ -1,7 +1,6 @@
 class CreateTweets < ActiveRecord::Migration
 
   def change
-
     create_table :tweets do |t|
       t.string(:twitter_user, null: false)
       t.text(:tweeted_text,   null: false)
@@ -9,7 +8,6 @@ class CreateTweets < ActiveRecord::Migration
       t.integer(:user_id,     null: false)
       t.timestamps
     end
-
     add_index(:tweets, :user_id)
   end
 end
