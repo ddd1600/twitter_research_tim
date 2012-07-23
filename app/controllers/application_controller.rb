@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  resoind_to(:html, :json)
+  respond_to(:html, :json, :xml, :yaml)
   before_filter(:authenticate_user!)
 end

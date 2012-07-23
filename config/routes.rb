@@ -1,4 +1,6 @@
 TwitterResearch::Application.routes.draw do
+  get "tweets/index"
+
   devise_for :users
 
   root(:to => 'searches#index')

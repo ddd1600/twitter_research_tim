@@ -6,10 +6,14 @@
 <ul>
   <% @results.each do |r| %>
     <li>
-      <img src="<%=r.avatar%>"/>
-      <FONT COLOR="#008B8B">User:</FONT><%=r.user%>
-      <FONT COLOR="#008B8B">Tweeted:</FONT><%=r.text%>
-      <FONT COLOR="#008B8B">On:</FONT><%=r.time%>
+			<%= r.user %> <em>said</em> <%= r.text %>
+			<% tweet = Tweet.new(twitter_user: r.user, tweeted_text: r.text, tweeted_at: r.time) %>
+			<%= form_for(tweet) do |form| %>
+			<%= form.hidden_field :twitter_user %>
+			<%= form.hidden_field :tweeted_at %>
+			<%= form.hidden_field :tweeted_text %>
+			<%= form.submit('Save') %>	
+		<% end %>
     </li>
     <%end%>
 </ul>

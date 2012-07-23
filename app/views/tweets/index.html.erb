@@ -1,0 +1,10 @@
+<div id="tweets">
+</ul>
+<% @tweets.each do |tweet| %>
+	<li>
+		ID: <%= tweet.id %>
+		<%= tweet.twitter_user %> <em>said</em> <%= tweet.tweeted_text%>
+	</li>	
+<% end %>
+<ul>
+</div>
