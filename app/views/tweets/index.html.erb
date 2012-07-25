@@ -4,7 +4,8 @@
 	<li>
 		ID: <%= tweet.id %>
 		<%= tweet.twitter_user %> <em>said</em> <%= tweet.tweeted_text%>
-	</li>	
+                <%= link_to 'View', tweet_url(tweet) %>
+	</li>
 <% end %>
 <ul>
 </div>
