@@ -1,11 +1,15 @@
 TwitterResearch::Application.routes.draw do
+
+	
+
   get "tweets/index"
 
   devise_for :users
 
-  root(:to => 'searches#index')
-  resources(:searches)
-  resources(:tweets) do
+  root :to => 'searches#index'
+  resources :searches
+	resources :categories
+  resources :tweets  do
 	resources :notes
 	end
   # The priority is based upon order of creation:

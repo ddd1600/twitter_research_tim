@@ -2,7 +2,7 @@ class Tweet < ActiveRecord::Base
 
 
   # this is for user input validation
-  attr_accessible(:twitter_user, :tweeted_text, :tweeted_at)
+  attr_accessible(:twitter_user, :tweeted_text, :tweeted_at, :categories_as_string)
 
   validates(:twitter_user, presence: true)
   validates(:tweeted_text, presence: true)

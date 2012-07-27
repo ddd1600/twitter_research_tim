@@ -1,11 +1,21 @@
-<div id="tweets">
-</ul>
+<table>
+	<tr>
+		<th>Tweet ID</th>
+		<th>User</th>
+		<th>Category</th>
+		<th>Tweet</th>
+		<th></th>
+		<th></th>
+	</tr>
 <% @tweets.each do |tweet| %>
-	<li>
-		ID: <%= tweet.id %>
-		<%= tweet.twitter_user %> <em>said</em> <%= tweet.tweeted_text%>
-                <%= link_to 'View', tweet_url(tweet) %>
-	</li>
+	<tr>
+		<td><%= tweet.id %></td>
+		<td><%= tweet.twitter_user %></td>
+		<td><%= tweet.categories %>
+		<td><%= tweet.tweeted_text %></td>
+		<td><%= link_to 'View', tweet_url(tweet) %></td>
+		<td><%= link_to 'Edit', edit_tweet_url(tweet) %></td>
+	</li> 
 <% end %>
 <ul>
 </div>
