@@ -1,12 +1,15 @@
 <h1>Categories#index</h1>
 <table id="categories">
+		<thead>
 		<tr>
 			<th>Category Name / See Tweets</th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
-		</tr>
+		</tr></thead>
+		<tbody>
 		<%= render(partial: "category", collection: @categories) %> <!-- means 'for each' category, render this partial -->
+		</tbody>
 </table>
 <%= link_to "Create New Category", new_category_url, :remote => true %>
 <div id="form-area"></div>

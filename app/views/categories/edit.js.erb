@@ -1,0 +1,5 @@
+$(function () {
+	var html = "<%= j(render(partial: 'form')) %>";
+	$("#form-area").html(html).fadeIn(); //html function takes whatever is inside of that div, and replaces it with the var 'html'
+	
+});
