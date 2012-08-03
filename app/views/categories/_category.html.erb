@@ -1,0 +1,5 @@
+		<tr id="<%= dom_id(category) %>">
+			<td><%= link_to category.title, category_url(category)%></td>
+			<td><%= link_to "Edit", edit_category_url(category) %></td>
+			<td><%= link_to "Delete", category_url(category), method: :delete, :remote => true ,confirm: "Are you sure?" %></td>
+		</tr>

@@ -1,19 +1,14 @@
 <h1>Categories#index</h1>
-<table>
+<table id="categories">
 		<tr>
 			<th>Category Name / See Tweets</th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 		</tr>
-	<% @categories.each do |c| %>
-		<tr>
-			<td><%= link_to c.title, category_url(c)%></td>
-			<td><%= link_to "Edit", edit_category_url(c) %></td>
-			<td><%= link_to "Delete", category_url(c), method: :delete, confirm: "Are you sure?" %></td>
-		</tr>
-		<% end %>
+		<%= render(partial: "category", collection: @categories) %> <!-- means 'for each' category, render this partial -->
 </table>
-<%= link_to "Create New Category", new_category_url %>
+<%= link_to "Create New Category", new_category_url, :remote => true %>
+<div id="form-area"></div>
 
 		

@@ -1,0 +1,6 @@
+$(function () {
+	$("#form-area").fadeOut();
+	var html = "<%= j(render(partial: 'category', object: @category)) %>";
+	$("#categories").append(html);
+
+});
